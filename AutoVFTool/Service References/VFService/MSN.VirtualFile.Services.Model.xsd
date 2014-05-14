@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/MSN.VirtualFile.Services.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MSN.VirtualFile.Services.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="VFUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmitTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UserPrivilages" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="UserRoles" nillable="true" type="tns:ArrayOfUserRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VFUserInfo" nillable="true" type="tns:VFUserInfo" />
+  <xs:complexType name="ArrayOfUserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserRole" nillable="true" type="tns:UserRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserRole" nillable="true" type="tns:ArrayOfUserRole" />
+  <xs:complexType name="UserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRole" nillable="true" type="tns:UserRole" />
+  <xs:complexType name="DocumentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Children" nillable="true" type="tns:DocumentListInfo" />
+      <xs:element minOccurs="0" name="ContentPageXSLTUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="ContentXSLTUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="DeleteActionPostXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeleteActionUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentLastPublished" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocumentLastUpdater" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentLastUpdaterID" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentPUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentSubmitTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocumentTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentType" type="tns:DocumentType" />
+      <xs:element minOccurs="0" name="DocumentXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentXmlPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExportPageUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="FormTemplateUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="NewActionPostXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewActionUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutputUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="tns:DocumentInfo" />
+      <xs:element minOccurs="0" name="ParentDocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="PreviewPathUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreviewUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="PublishActionPostXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublishActionUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchXSLTUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="UpdateActionPostXSLT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateActionUri" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentInfo" nillable="true" type="tns:DocumentInfo" />
+  <xs:complexType name="DocumentListInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentInfo" nillable="true" type="tns:DocumentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentListInfo" nillable="true" type="tns:DocumentListInfo" />
+  <xs:simpleType name="DocumentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Site" />
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="Page" />
+      <xs:enumeration value="Content" />
+      <xs:enumeration value="Loading" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocumentType" nillable="true" type="tns:DocumentType" />
+  <xs:complexType name="ContentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentFirstPublished" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentInput" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentLastPublished" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentLastUpdaterID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentLastUpdaterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentOutput" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentPUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentRating" type="xs:double" />
+      <xs:element minOccurs="0" name="ContentSubmitTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentVote" type="xs:double" />
+      <xs:element minOccurs="0" name="ContentXmlPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="NewActionResponse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutputPhysicPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutputUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreviewPathUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreviewUri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="PublishActionResponse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SequenceID" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateActionResponse" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContentInfo" nillable="true" type="tns:ContentInfo" />
+  <xs:complexType name="ContentListInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContentInfo" nillable="true" type="tns:ContentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContentListInfo" nillable="true" type="tns:ContentListInfo" />
+  <xs:complexType name="ClientFileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlockID" type="xs:int" />
+      <xs:element minOccurs="0" name="BytesUploaded" type="xs:long" />
+      <xs:element minOccurs="0" name="FileMetadata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileSize" type="xs:long" />
+      <xs:element minOccurs="0" name="SessionID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" type="tns:FileStatus" />
+      <xs:element minOccurs="0" name="Stream" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientFileInfo" nillable="true" type="tns:ClientFileInfo" />
+  <xs:simpleType name="FileStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Uploading" />
+      <xs:enumeration value="Finished" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Canceled" />
+      <xs:enumeration value="Removed" />
+      <xs:enumeration value="PostCompleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FileStatus" nillable="true" type="tns:FileStatus" />
+  <xs:complexType name="RemoteFileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LiveUri" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="SessionID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" type="tns:FileStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoteFileInfo" nillable="true" type="tns:RemoteFileInfo" />
+</xs:schema>

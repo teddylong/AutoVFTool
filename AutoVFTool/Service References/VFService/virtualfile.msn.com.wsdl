@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://virtualfile.msn.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://virtualfile.msn.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://virtualfile.msn.com/Imports">
+      <xsd:import namespace="http://virtualfile.msn.com" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MSN.VirtualFile.Services.Model" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPSPService_LoginStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_LoginStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_AddDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDocument" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_AddDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_EditDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditDocument" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_EditDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocument" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_DeleteDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocument" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_DeleteDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocumentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentList" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocumentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocumentListByPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByPath" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetDocumentListByPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_PublishPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPage" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_PublishPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_AddContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_AddContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_EditContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_EditContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_DeleteContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_DeleteContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_CopyContentToPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyContentToPage" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_CopyContentToPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyContentToPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_PublishContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_PublishContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentList" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_MoveContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveContent" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_MoveContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_ExportContentsFromPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportContentsFromPage" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_ExportContentsFromPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportContentsFromPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_ImportContentToPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContentToPage" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_ImportContentToPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContentToPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_UploadImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImage" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_UploadImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_UploadImageWithUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImageWithUrl" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_UploadImageWithUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImageWithUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContentFormTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentFormTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IPSPService_GetContentFormTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentFormTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetPageOutput_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetPageOutput" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetPageOutput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetPageOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetPageOutputByPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetPageOutputByPath" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetPageOutputByPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetPageOutputByPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentOutput_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentOutput" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentOutput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentOutputByPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentOutputByPath" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentOutputByPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentOutputByPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetOutputByPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetOutputByPath" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetOutputByPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetOutputByPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentFormTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentFormTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlGetContentFormTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlGetContentFormTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetContentXSLT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentXSLT" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetContentXSLT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentXSLTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetContentPageXSLT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentPageXSLT" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetContentPageXSLT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentPageXSLTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetSearchXSLT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchXSLT" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_GetSearchXSLT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchXSLTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlExportContentsFromPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlExportContentsFromPage" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_XmlExportContentsFromPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlExportContentsFromPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_ResetContentSequence_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetContentSequence" />
+  </wsdl:message>
+  <wsdl:message name="IXMLPSPService_ResetContentSequence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetContentSequenceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPSPService">
+    <wsdl:operation name="LoginStatus">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/LoginStatus" message="tns:IPSPService_LoginStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/LoginStatusResponse" message="tns:IPSPService_LoginStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDocument">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/AddDocument" message="tns:IPSPService_AddDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/AddDocumentResponse" message="tns:IPSPService_AddDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDocument">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/EditDocument" message="tns:IPSPService_EditDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/EditDocumentResponse" message="tns:IPSPService_EditDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocument" message="tns:IPSPService_GetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocumentResponse" message="tns:IPSPService_GetDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/DeleteDocument" message="tns:IPSPService_DeleteDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/DeleteDocumentResponse" message="tns:IPSPService_DeleteDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentList">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocumentList" message="tns:IPSPService_GetDocumentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocumentListResponse" message="tns:IPSPService_GetDocumentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByPath">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocumentListByPath" message="tns:IPSPService_GetDocumentListByPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetDocumentListByPathResponse" message="tns:IPSPService_GetDocumentListByPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishPage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/PublishPage" message="tns:IPSPService_PublishPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/PublishPageResponse" message="tns:IPSPService_PublishPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/AddContent" message="tns:IPSPService_AddContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/AddContentResponse" message="tns:IPSPService_AddContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/EditContent" message="tns:IPSPService_EditContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/EditContentResponse" message="tns:IPSPService_EditContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/DeleteContent" message="tns:IPSPService_DeleteContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/DeleteContentResponse" message="tns:IPSPService_DeleteContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContent" message="tns:IPSPService_GetContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContentResponse" message="tns:IPSPService_GetContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyContentToPage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/CopyContentToPage" message="tns:IPSPService_CopyContentToPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/CopyContentToPageResponse" message="tns:IPSPService_CopyContentToPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/PublishContent" message="tns:IPSPService_PublishContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/PublishContentResponse" message="tns:IPSPService_PublishContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentList">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContentList" message="tns:IPSPService_GetContentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContentListResponse" message="tns:IPSPService_GetContentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveContent">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/MoveContent" message="tns:IPSPService_MoveContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/MoveContentResponse" message="tns:IPSPService_MoveContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportContentsFromPage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/ExportContentsFromPage" message="tns:IPSPService_ExportContentsFromPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/ExportContentsFromPageResponse" message="tns:IPSPService_ExportContentsFromPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContentToPage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/ImportContentToPage" message="tns:IPSPService_ImportContentToPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/ImportContentToPageResponse" message="tns:IPSPService_ImportContentToPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/UploadImage" message="tns:IPSPService_UploadImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/UploadImageResponse" message="tns:IPSPService_UploadImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageWithUrl">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/UploadImageWithUrl" message="tns:IPSPService_UploadImageWithUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/UploadImageWithUrlResponse" message="tns:IPSPService_UploadImageWithUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentFormTemplate">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContentFormTemplate" message="tns:IPSPService_GetContentFormTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IPSPService/GetContentFormTemplateResponse" message="tns:IPSPService_GetContentFormTemplate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IXMLPSPService">
+    <wsdl:operation name="XmlGetPageOutput">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetPageOutput" message="tns:IXMLPSPService_XmlGetPageOutput_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetPageOutputResponse" message="tns:IXMLPSPService_XmlGetPageOutput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlGetPageOutputByPath">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetPageOutputByPath" message="tns:IXMLPSPService_XmlGetPageOutputByPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetPageOutputByPathResponse" message="tns:IXMLPSPService_XmlGetPageOutputByPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlGetContentOutput">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentOutput" message="tns:IXMLPSPService_XmlGetContentOutput_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentOutputResponse" message="tns:IXMLPSPService_XmlGetContentOutput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlGetContentOutputByPath">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentOutputByPath" message="tns:IXMLPSPService_XmlGetContentOutputByPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentOutputByPathResponse" message="tns:IXMLPSPService_XmlGetContentOutputByPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlGetOutputByPath">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetOutputByPath" message="tns:IXMLPSPService_XmlGetOutputByPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetOutputByPathResponse" message="tns:IXMLPSPService_XmlGetOutputByPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlGetContentFormTemplate">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentFormTemplate" message="tns:IXMLPSPService_XmlGetContentFormTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlGetContentFormTemplateResponse" message="tns:IXMLPSPService_XmlGetContentFormTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentXSLT">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetContentXSLT" message="tns:IXMLPSPService_GetContentXSLT_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetContentXSLTResponse" message="tns:IXMLPSPService_GetContentXSLT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentPageXSLT">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetContentPageXSLT" message="tns:IXMLPSPService_GetContentPageXSLT_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetContentPageXSLTResponse" message="tns:IXMLPSPService_GetContentPageXSLT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchXSLT">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetSearchXSLT" message="tns:IXMLPSPService_GetSearchXSLT_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/GetSearchXSLTResponse" message="tns:IXMLPSPService_GetSearchXSLT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlExportContentsFromPage">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlExportContentsFromPage" message="tns:IXMLPSPService_XmlExportContentsFromPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/XmlExportContentsFromPageResponse" message="tns:IXMLPSPService_XmlExportContentsFromPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetContentSequence">
+      <wsdl:input wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/ResetContentSequence" message="tns:IXMLPSPService_ResetContentSequence_InputMessage" />
+      <wsdl:output wsaw:Action="http://virtualfile.msn.com/IXMLPSPService/ResetContentSequenceResponse" message="tns:IXMLPSPService_ResetContentSequence_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

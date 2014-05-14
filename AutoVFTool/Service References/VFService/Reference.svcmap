@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="009d7663-d41e-4aaf-b29a-92ee06e204c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vfpartner.cloudapp.net/services/VFService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="virtualfile.msn.com.wsdl" MetadataType="Wsdl" ID="153466ff-e8d4-44d2-aa4c-67669bf267a0" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bcd185f1-bd35-429a-90f0-56a52e4cc342" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="virtualfile.msn.com.xsd" MetadataType="Schema" ID="c91b2fef-dcc1-4359-960c-b77f3094f842" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c4279609-2e29-4579-a426-7f72d2841e6f" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="MSN.VirtualFile.Services.Model.xsd" MetadataType="Schema" ID="a6905bd4-64b5-40c7-909d-63ec14ffe1ff" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="8622c4a3-ab7a-4df6-b8da-fba703b99cb0" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="daf0a147-962d-4cfb-8074-1bc2a4c9c884" SourceId="1" SourceUrl="http://vfpartner.cloudapp.net/services/VFService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
